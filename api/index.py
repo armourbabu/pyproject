@@ -1,15 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask
 
-#app = Flask(__name__)
-app = Flask(__name__, template_folder= "/templates")
+app = Flask(__name__)
+#app = Flask(__name__, template_folder= "/templates")
 
 @app.route('/')
 def home():
     return 'Started!'
 
-@app.route("/home")
-def home():
-    return render_template("home.html") #rendering our home.html contained within /templates
+# @app.route("/home")
+# def home():
+#     return render_template("home.html") #rendering our home.html contained within /templates
 
 # @app.route("/account", methods=["POST", "GET"]) #defining the routes for the account() funtion
 # def account():
