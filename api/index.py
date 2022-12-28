@@ -1,11 +1,14 @@
 from flask import Flask
 
 app = Flask(__name__)
-#app = Flask(__name__, template_folder= "/templates")
 
 @app.route('/')
 def home():
-    return 'Started!'
+    return 'Hello, World!'
+
+@app.route('/about')
+def about():
+    return 'About'
 
 # @app.route("/home")
 # def home():
